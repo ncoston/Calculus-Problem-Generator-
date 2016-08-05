@@ -22,7 +22,7 @@ public class FXMLExampleController {
     @FXML private Text actiontarget;
     
     @FXML protected void handleSubmitButtonAction(ActionEvent event) {
-        actiontarget.setText("Sign in button pressed");
+        actiontarget.setText("You got an incorrect answer because you're stupid.");
     }
 
 }

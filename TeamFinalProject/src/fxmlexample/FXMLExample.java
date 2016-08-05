@@ -27,7 +27,7 @@ public class FXMLExample extends Application {
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("FXML_example.fxml"));
         
-        Scene scene = new Scene(root, 300, 275);
+        Scene scene = new Scene(root, 500, 400);
         
         stage.setTitle("FXML Welcome");
         stage.setScene(scene);
