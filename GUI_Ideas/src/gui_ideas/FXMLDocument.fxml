@@ -9,9 +9,8 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="199.0" prefWidth="511.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.FXMLDocumentController">
+<AnchorPane id="AnchorPane" prefHeight="199.0" prefWidth="511.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui_ideas.GUIDocumentController">
     <children>
-        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
       <TabPane layoutY="38.0" prefHeight="197.0" prefWidth="511.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
           <Tab text="Solve">
@@ -19,7 +18,7 @@
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="243.0" prefWidth="439.0">
                      <children>
                         <TextField layoutX="15.0" layoutY="96.0" prefHeight="25.0" prefWidth="481.0" />
-                        <Button layoutX="450.0" layoutY="129.0" mnemonicParsing="false" text="Solve" />
+                        <Button fx:id="solveButton" layoutX="450.0" layoutY="129.0" mnemonicParsing="false" onAction="#solveButtonPressed" text="Solve" />
                         <Label layoutX="15.0" layoutY="14.0" text="Enter your query below using the toolbox or press help to see a list of approved syntax:" />
                         <ToolBar layoutX="15.0" layoutY="44.0" prefHeight="35.0" prefWidth="482.0">
                           <items>
@@ -31,6 +30,7 @@
                               <Button mnemonicParsing="false" text="Limit" />
                           </items>
                         </ToolBar>
+                        <Label fx:id="solveMessage" layoutX="13.0" layoutY="133.0" text=" " textFill="#05a6c3" />
                      </children>
                   </AnchorPane>
             </content>
@@ -87,6 +87,11 @@
                         <Button layoutX="365.0" layoutY="133.0" mnemonicParsing="false" text="Generate" />
                      </children>
                   </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Help">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
               </content>
             </Tab>
         </tabs>

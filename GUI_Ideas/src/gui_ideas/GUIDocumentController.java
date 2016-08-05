@@ -19,12 +19,12 @@ import javafx.scene.control.Label;
 public class GUIDocumentController implements Initializable {
     
     @FXML
-    private Label label;
+    private Label solveMessage;
     
     @FXML
-    private void handleButtonAction(ActionEvent event) {
-        System.out.println("You clicked me!");
-        label.setText("Hello World!");
+    private void solveButtonPressed(ActionEvent event) {
+        /**System.out.println("You clicked me!");*/
+        solveMessage.setText("We are working on solving all your problems!");
     }
     
     @Override
