@@ -10,6 +10,17 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javax.ws.rs.client.Client;
+//import javax.ws.rs.client.AsyncInvoker;
+import javax.ws.rs.client.ClientBuilder;
+//import javax.ws.rs.client.ClientRequestContext;
+//import javax.ws.rs.client.ClientRequestFilter;
+//import javax.ws.rs.client.ClientResponseContext;
+//import javax.ws.rs.client.ClientResponseFilter;
+//import javax.ws.rs.client.Entity;
+//import javax.ws.rs.client.Invocation;
+
+
 
 /**
  *
@@ -22,6 +33,7 @@ FXML application. It sets stage, scene, buttons, etc.
 */
 
 public class FXMLExample extends Application {
+    Client client = ClientBuilder.newClient();
     
     @Override
     public void start(Stage stage) throws Exception {
