@@ -7,8 +7,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxmlexample.FXMLExampleController">
    <children>
       <Label layoutX="155.0" layoutY="14.0" text="Interacting with Wolfram Alpha">
          <font>
@@ -18,7 +17,7 @@
       <TextArea fx:id="textEntered" layoutX="28.0" layoutY="66.0" prefHeight="71.0" prefWidth="546.0" />
       <Label layoutX="28.0" layoutY="45.0" text="Enter some text here:" />
       <Label layoutX="28.0" layoutY="178.0" text="Wolfram Alpha's Response:" />
-      <AnchorPane fx:id="responseTarget" layoutX="28.0" layoutY="195.0" prefHeight="191.0" prefWidth="546.0" />
-      <Button fx:id="submit" layoutX="522.0" layoutY="146.0" mnemonicParsing="false" onAction="#sendText" text="Submit" />
+      <Button fx:id="submitButton" layoutX="522.0" layoutY="145.0" mnemonicParsing="false" onAction="#sendText" text="Submit" />
+      <Label fx:id="actiontarget" layoutX="28.0" layoutY="200.0" prefHeight="179.0" prefWidth="546.0" text=" " />
    </children>
 </AnchorPane>

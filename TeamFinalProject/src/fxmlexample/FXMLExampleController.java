@@ -7,7 +7,13 @@ package fxmlexample;
  
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
+import javax.ws.rs.client.Client;
+import javax.ws.rs.client.ClientBuilder;
+import javax.ws.rs.client.WebTarget;
 
 /**
  *
@@ -19,10 +25,25 @@ import javafx.scene.text.Text;
 
 */
 public class FXMLExampleController {
-    @FXML private Text actiontarget;
     
-    @FXML protected void handleSubmitButtonAction(ActionEvent event) {
-        actiontarget.setText("You got an incorrect answer because you're stupid.");
+    
+    
+    @FXML private Label actiontarget;
+    
+    @FXML private TextArea textEntered;
+    
+    
+    @FXML protected void sendText(ActionEvent event) {
+        String string = "Nothing entered";
+        if (textEntered.getText() != null) {
+            string = textEntered.getText();
+        }
+            actiontarget.setText(string);
+        }
+        
+        //String path = "http://api.wolframalpha.com/v2";
+        //Client client = ClientBuilder.newClient();
+        //WebTarget resourceWebTarget = WebTarget.path(path);
+        
     }
 
-}
