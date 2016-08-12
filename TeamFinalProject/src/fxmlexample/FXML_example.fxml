@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<GridPane alignment="center" hgap="10" prefHeight="420.0" prefWidth="511.0" vgap="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="fxmlexample.FXMLExampleController">
+<GridPane alignment="center" hgap="10" prefHeight="420.0" prefWidth="511.0" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxmlexample.FXMLExampleController">
     <padding>
         <Insets bottom="10" left="25" right="25" top="10" />
     </padding>
@@ -24,10 +24,13 @@
       <TextField prefHeight="26.0" prefWidth="261.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="8" />
       <TextFlow prefHeight="97.0" prefWidth="478.0" GridPane.rowIndex="3" GridPane.rowSpan="2">
          <children>
-            <TextArea prefHeight="88.0" prefWidth="432.0" />
+           
+               <TextField prefHeight="88.0" prefWidth="432.0" />
          </children>
+        
       </TextFlow>
       <FlowPane prefHeight="200.0" prefWidth="200.0" />
+      <Label fx:id="actiontarget" prefHeight="47.0" prefWidth="141.0" GridPane.columnIndex="1" GridPane.rowIndex="10" />
    </children>
    <columnConstraints>
       <ColumnConstraints maxWidth="332.0" minWidth="124.0" prefWidth="216.0" />
@@ -44,9 +47,8 @@
       <RowConstraints />
       <RowConstraints />
       <RowConstraints />
-      <RowConstraints />
-      <RowConstraints minHeight="10.0" prefHeight="30.0" />
-      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints maxHeight="40.0" minHeight="26.0" prefHeight="26.0" />
+      <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="30.0" />
    </rowConstraints>
 
 
