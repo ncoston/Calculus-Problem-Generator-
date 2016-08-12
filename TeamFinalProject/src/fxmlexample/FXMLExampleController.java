@@ -36,9 +36,9 @@ public class FXMLExampleController {
     @FXML protected void sendText(ActionEvent event) {
         String string = "Nothing entered";
         String path = "http://api.wolframalpha.com";
-        Client client = ClientBuilder.newClient();
+        //Client client = ClientBuilder.newClient();
         //When the Client instance is uncommented the code will run, but produce an exception if this line is called.
-        WebTarget resourceWebTarget = client.target(path);
+        //WebTarget resourceWebTarget = client.target(path);
         //Something about how WebTaget.path is non-static and can't be referenced from a static context?
         if (textEntered.getText() != null) {
             string = textEntered.getText();
