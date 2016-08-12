@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="GUI_Ideas.jar" size="3363" download="eager" />
+    <jar href="GUI_Ideas.jar" size="3201" download="eager" />
   </resources>
   <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="GUI_Ideas" >
     <param name="requiredFXVersion" value="8.0+"/>
