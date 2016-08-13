@@ -14,6 +14,7 @@ import javafx.scene.text.Text;
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.WebTarget;
+import javax.ws.rs.core.Response;
 
 /**
  *
@@ -36,17 +37,22 @@ public class FXMLExampleController {
     
     
     @FXML protected void sendText(ActionEvent event) {
-        String string = "Nothing entered";
-        String path = "http://api.wolframalpha.com/v2";
+        String appId = "GLHTK4-96L2PVQT4T";
+        String input = "Nothing entered";
         Client client = ClientBuilder.newClient();
+        WebTarget wolframTarget = client.target("http://api.wolframalpha.com/v2/query");
         //When the Client instance is uncommented the code will run, but produce an exception if this line is called.
         //WebTarget resourceWebTarget = client.target(path);
         //Something about how WebTaget.path is non-static and can't be referenced from a static context?
         if (textEntered.getText() != null) {
-            string = textEntered.getText();
+            input = textEntered.getText();
+            WebTarget queryTarget = wolframTarget.queryParam("input", input).queryParam("appid", appId);
+            Response response = queryTarget.request().get();
+            actiontarget.setText(response.toString());
+            System.out.println(response);
         }
-            actiontarget.setText(string);
-            System.out.println(string);
+            
+            
         }
         
         
