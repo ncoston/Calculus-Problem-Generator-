@@ -26,15 +26,19 @@ public class SampleProgram {
 
 ClientConfig config = new ClientConfig();
 Client client = ClientBuilder.newClient(config);
-WebTarget getTarget =  client.target("http://jsonplaceholder.typicode.com/posts");
-WebTarget target =  client.target("http://jsonplaceholder.typicode.com/posts");
-Response response1 = target.request(MediaType.APPLICATION_JSON).post(Entity.entity("{\"name\": \"will\"}", MediaType.APPLICATION_JSON));
+String appId="GLHTK4-96L2PVQT4T";
+String input="integral of x^3 from 0 to 3";
+WebTarget target =  client.target("http://api.wolframalpha.com/v2/query");
+//WebTarget target =  client.target("http://api.wolframalpha.com/v2/query?input=pi&appid=GLHTK4-96L2PVQT4T");
+//Response response1 = target.request(MediaType.APPLICATION_JSON).post(Entity.entity("{\"name\": \"will\"}", MediaType.APPLICATION_JSON));
+//Try "Query param" first
+WebTarget queryTarget = target.queryParam("input", input).queryParam("appid", appId);
+System.out.print(queryTarget);
+Response response = queryTarget.request().get();
 
-Response response = getTarget.queryParam("userId", "8").request().get();
-
-        //System.out.println("post response body: " + response1.readEntity(String.class));
+System.out.println("post response body: " + response.readEntity(String.class));
 System.out.println(response.getStatus());
-        System.out.println("response body: " + response.readEntity(String.class));
+        //System.out.println("response body: " + response.readEntity(String.class));
         
 //        KernelLink ml = null;
 //
