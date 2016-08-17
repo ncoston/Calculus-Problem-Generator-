@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="NataliesGUI.jnlp">
+  <information>
+    <title>NataliesGUI</title>
+    <vendor>Natalie</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="NataliesGUI.jar" size="3170" download="eager" />
+    <jar href="lib\FastInfoset.jar" size="292972" download="eager" />
+    <jar href="lib\activation.jar" size="124315" download="eager" />
+    <jar href="lib\gmbal-api-only.jar" size="21663" download="eager" />
+    <jar href="lib\ha-api.jar" size="36681" download="eager" />
+    <jar href="lib\javax.annotation.jar" size="22130" download="eager" />
+    <jar href="lib\javax.mail_1.4.jar" size="383393" download="eager" />
+    <jar href="lib\jaxb-api.jar" size="100609" download="eager" />
+    <jar href="lib\jaxb-impl.jar" size="1110396" download="eager" />
+    <jar href="lib\jaxb-xjc.jar" size="3476101" download="eager" />
+    <jar href="lib\jaxws-api.jar" size="47225" download="eager" />
+    <jar href="lib\jaxws-rt.jar" size="2165827" download="eager" />
+    <jar href="lib\jaxws-tools.jar" size="835249" download="eager" />
+    <jar href="lib\jsr173_1.0_api.jar" size="45537" download="eager" />
+    <jar href="lib\jsr181-api.jar" size="8204" download="eager" />
+    <jar href="lib\management-api.jar" size="41737" download="eager" />
+    <jar href="lib\mimepull.jar" size="42615" download="eager" />
+    <jar href="lib\policy.jar" size="158188" download="eager" />
+    <jar href="lib\saaj-api.jar" size="25164" download="eager" />
+    <jar href="lib\saaj-impl.jar" size="289237" download="eager" />
+    <jar href="lib\stax-ex.jar" size="15961" download="eager" />
+    <jar href="lib\stax2-api.jar" size="179979" download="eager" />
+    <jar href="lib\streambuffer.jar" size="63934" download="eager" />
+    <jar href="lib\woodstox-core-asl.jar" size="472263" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="NataliesGUI" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="fxmlexample.FXMLExample"  name="NataliesGUI" />
+  <update check="always"/>
+</jnlp>
