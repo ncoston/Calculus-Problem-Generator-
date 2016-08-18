@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package sampleprogram;
+
 import java.util.HashMap;
 import java.util.Map;
 import javax.ws.rs.client.Client;
@@ -13,33 +14,35 @@ import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import org.glassfish.jersey.client.ClientConfig;
+
 /**
  *
  * @author ianlong
  */
 //import com.wolfram.jlink.*;
 
-
 public class SampleProgram {
 
     public static void main(String[] argv) {
 
-ClientConfig config = new ClientConfig();
-Client client = ClientBuilder.newClient(config);
-String appId="GLHTK4-96L2PVQT4T";
-String input="integral of x^3 from 0 to 3";
-WebTarget target =  client.target("http://api.wolframalpha.com/v2/query");
+        ClientConfig config = new ClientConfig();
+        Client client = ClientBuilder.newClient(config);
+        String appId = "GLHTK4-96L2PVQT4T";
+        String input = "integral of x^3 from 0 to 3";
+        WebTarget target = client.target("http://api.wolframalpha.com/v2/query");
 //WebTarget target =  client.target("http://api.wolframalpha.com/v2/query?input=pi&appid=GLHTK4-96L2PVQT4T");
 //Response response1 = target.request(MediaType.APPLICATION_JSON).post(Entity.entity("{\"name\": \"will\"}", MediaType.APPLICATION_JSON));
 //Try "Query param" first
-WebTarget queryTarget = target.queryParam("input", input).queryParam("appid", appId);
-System.out.print(queryTarget);
-Response response = queryTarget.request().get();
-
-System.out.println("post response body: " + response.readEntity(String.class));
-System.out.println(response.getStatus());
-        //System.out.println("response body: " + response.readEntity(String.class));
+        WebTarget queryTarget = target.queryParam("input", input).queryParam("appid", appId).queryParam("format", "mathml");
+        System.out.print(queryTarget);
+        Response response = queryTarget.request().get();
+        String responseBody = response.readEntity(String.class);
+        System.out.println("post response body: " + responseBody);
+        System.out.println(response.getStatus());
+        MathMLParser parser = new MathMLParser();
+        System.out.println("MathML portion of response: " + parser.getMathMLFromXMLString(responseBody));
         
+        //System.out.println("response body: " + response.readEntity(String.class));
 //        KernelLink ml = null;
 //
 //        try {
