@@ -1,10 +1,7 @@
-/TeamFinalProject/nbproject/private/
-/TeamFinalProject/build/
-/TeamFinalProject/dist/
-/WolframExample/nbproject/private/
-/WolframSampleProgram/nbproject/private/
-/WolframSampleProgram/build/
-/SampleProgram/nbproject/private/
-/SampleProgram/build/
-/GUI_Ideas/nbproject/private/
-/TeamFinalProject/dist/
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+nbactions.xml
+.nb-gradle/
