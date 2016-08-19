@@ -1,0 +1,26 @@
+apply plugin: 'java'
+apply from: "http://dl.bintray.com/content/shemnon/javafx-gradle/0.3.0/javafx.plugin"
+
+// Configures plugin
+javafx {
+    mainClass 'team.TeamFinalProjectMainClass'
+    
+    // ...
+}
+
+String getProjectProperty(String propertyName) {
+    project.hasProperty(propertyName) ? project.property(propertyName) : null
+}
+
+repositories{
+	mavenCentral()
+}
+
+dependencies{
+	compile group: 'org.glassfish.jersey.core', name: 'jersey-client', version: '2.12'
+}
+
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '1.9'
+}
