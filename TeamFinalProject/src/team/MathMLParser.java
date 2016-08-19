@@ -3,7 +3,7 @@ package team;
 public class MathMLParser {
 
     /**
-     * This method takes in an input MathML String and parses the xml portion out of it. It assumes the xml is well
+     * This method takes in an input XML String and parses the MathML portion out of it. It assumes the xml is well
      * formed and has no errors in formatting.
      *
      * @param inputMathML the String input XML document, which contains a mathML portion
