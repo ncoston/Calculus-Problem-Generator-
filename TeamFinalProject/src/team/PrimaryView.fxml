@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.web.*?>
 <?import java.lang.*?>
 <?import java.net.*?>
 <?import javafx.geometry.*?>
@@ -17,20 +18,21 @@
         <TextArea fx:id="textEntered" layoutX="28.0" layoutY="66.0" prefHeight="57.0" prefWidth="546.0" />
         <Label layoutX="28.0" layoutY="45.0" text="Enter some text here:" />
           <Label layoutX="16.0" layoutY="162.0" maxWidth="-Infinity" prefHeight="17.0" prefWidth="273.0" text="Wolfram Alpha's Response:" />
-        <ScrollPane fx:id="spWholeResponse" layoutX="14.0" layoutY="181.0" prefHeight="100.0" prefWidth="273.0">
+        <ScrollPane fx:id="spWholeResponse" layoutX="14.0" layoutY="181.0" prefHeight="0.0" prefWidth="273.0">
          <content>
             <Label fx:id="rawWolframLabel" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" prefHeight="2005.0" prefWidth="252.0" wrapText="true" />
          </content>
         </ScrollPane>
         <Label layoutX="304.0" layoutY="162.0" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" prefHeight="17.0" prefWidth="264.0" text="Wolfram Alpha's Response MathML portion:" />
 
-        <ScrollPane fx:id="spMathMLResponse" layoutX="307.0" layoutY="182.0" prefHeight="100.0" prefWidth="273.0">
+        <ScrollPane fx:id="spMathMLResponse" layoutX="307.0" layoutY="182.0" prefHeight="16.0" prefWidth="273.0">
             <content>
-                <Label fx:id="mathMLLabel" layoutX="28.0" layoutY="314.0" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" prefHeight="1500.0" prefWidth="254.0" text=" " wrapText="true" />
+                <Label fx:id="mathMLLabel" layoutX="28.0" layoutY="314.0" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" prefHeight="2.0" prefWidth="254.0" text=" " wrapText="true" />
             </content>
 
         </ScrollPane>
         <Button fx:id="submitButton" layoutX="522.0" layoutY="123.0" mnemonicParsing="false" onAction="#sendText" text="Submit" />
+      <WebView fx:id="dicks" layoutX="7.0" layoutY="224.0" prefHeight="258.0" prefWidth="583.0" />
 
     </children>
 </AnchorPane>
